@@ -1,0 +1,54 @@
+$color-orange: #F7A491;
+$color-white: #fff;
+body{
+    background-color: #4751C0;
+    .container{
+        display: flex;
+        flex-direction: column;
+        font-weight: 700;
+        .logo{
+            background-image: url(../images/logo.svg);
+            background-position: center;
+            background-size: cover;
+            min-width: 20vw;
+            height: 100px;
+        }
+        label{
+            color: $color-orange;
+            margin-top: 5px;
+        }
+        input, .dropdown-input{
+            background-color: inherit;
+            color: $color-white;
+            border: 1px solid $color-white;
+            border-radius: 5px;
+            margin: 10px 0;
+            padding: 10px;
+        }
+        .dropdown-input{
+            position: relative;
+            cursor: pointer;
+        }
+        .dropdown-input::after{
+            content: url(../images/arrow.svg);
+            width: 10px;
+            height: 10px;
+            position: absolute;
+            top: 10px;
+            right: 22px;
+            z-index: -1;
+        }
+        input::placeholder{
+            color:#b4baffb9;
+        }
+        button{
+            background: linear-gradient(90deg, #FFA67A 0%, #FF6065 100%);
+            margin-top: 30px;
+            border-radius: 5px;
+            padding: 10px;
+            color: $color-white;
+            font-weight: bold;
+        }
+    }
+}  
+

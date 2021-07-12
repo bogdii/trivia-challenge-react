@@ -1,23 +1,10 @@
-import React, { useState, useEffect } from 'react';
-import Questionaire from './components/Questionaire';
-const API_URL = 'https://opentdb.com/api.php?amount=10&difficulty=easy&type=boolean';
+import React, { useState, useEffect } from "react";
+
+import { Questionaire, StartScreen } from "./screens/index";
 
 function App() {
-  const [questions, setQuestions] = useState([]);
-  
-  useEffect(()=>{
-    fetch(API_URL)
-      .then((res)=> res.json())
-      .then((data) => {
-        setQuestions(data.results);
-        console.log(data)
-      });
-  },[]);
-
-  
-  return <div className="container text-center text-blue-800">
-          <Questionaire data={questions[0]} />
-        </div>;
+  // <div className="container text-center text-blue-800">
+  return <StartScreen />;
 }
 
 export default App;
